@@ -14,6 +14,9 @@
 - 도전 과제 1: 만들어 둔 컴포넌트에 props 전달하고, 전달받은 props 사용하기
   - 변수로 전달한 props를 객체로 사용하고자 해서 에러 발생
     -> https://www.notion.so/goorm/useState-f818eaf34e6f4636989466973b1a22d1?pvs=4
+  - text 인자를 전달했으나, undefined 에러 반환
+    -> 하나의 컴포넌트 안에서 2개의 버튼을 제어하고자 했으나, 분리함
+    -> https://www.notion.so/goorm/undefined-8e9cb7e5befd45a6a1dde29350d5af0b?pvs=4
 
 ### 오늘의 회고
 - 에러가 발생한 이유를 찾기까지 시간이 오래 걸린다. 
