@@ -12,6 +12,25 @@
   - json 파일에서 사용했던 컬럼명과 mysql로 테이블을 생성할 때 컬럼명을 다르게 지정한 부분이 있어 더욱 혼란스러웠던 듯 하다.
   - 리턴 값으로 받는 값이 객체인지 배열인지 단일 값인지 구분할 줄 알아야 한다. 콘솔로 확인했을 땐 값을 제대로 받아왔는데, 왜 출력하지 못하는지 한참 헤맸다.
 
+### 오늘 배운 내용
+- textarea에 입력한 값을 줄바꿈 포함하여 sql db에 저장하기
+  -> Express.js와 같은 서버에서 폼 데이터를 받아 처리한다. 
+
+``` JS
+const bodyParser = require('body-parser');
+
+// Express.js에서 body-parser를 사용하여 폼 데이터를 파싱
+app.use(bodyParser.urlencoded({ extended: true }));
+```
+
+- 줄바꿈을 포함하여 저장된 값을 줄바꿈 반영하여 보여주기
+  -> 줄바꿈(\n)을 <br> 태그로 변환하여 HTML에 삽입 `.replace(/\n/g, "<br>")`
+
+```
+// 줄바꿈 문자를 <br> 태그로 변환
+const comment_text = c.comments_text.replace(/\n/g, "<br>");
+```
+
 ### 오늘의 회고
 - 무엇이 문제였는지 조금씩 이해하기 시작했으니, 남은 mysql db와 연결 시키는 과정은 오늘보다 속도가 빨라질 것을 기대한다. 
   -> 잔여 작업 : 게시글/댓글 수정하기, 닉네임/비밀번호 수정하기
